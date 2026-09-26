@@ -112,12 +112,13 @@
       'what.4.link': 'See the homepage rebuild',
 
       'stats.label': 'What I cut on My Feed',
-      'stats.1': 'Requests on the monitoring screen',
-      'stats.2': 'Server-rendered response size (max)',
-      'stats.3': 'Unread-count checks per minute',
+      'stats.1': 'Requests on the monitoring screen (staging)',
+      'stats.2': 'Horizontal overflow at 375px',
+      'stats.3': 'Requests per notification poll (in production)',
       'stats.unit.count': '',
       'stats.unit.times': '',
-      'stats.note': 'From the change commits, July 2026',
+      'stats.unit.req': '',
+      'stats.note': 'Requests measured on staging · notification change is in production · overflow from the fix commits',
       'stats.link': 'How I cut them',
 
       /* ---------------- featured work ---------------- */
@@ -131,7 +132,7 @@
         'On My Feed, used by some 130 farms as of July 2026, I have built and fixed the monitoring screens, the admin and the web notifications.',
       'work.myfeed.caption': 'Farm monitoring · the live service',
       'work.home.tag': 'AimBe Lab · company homepage',
-      'work.home.h': 'From an investor brochure<br>to a site for customers.',
+      'work.home.h': 'From a company-profile site<br>to a service-first landing page.',
       'work.home.lede':
         'I did the planning, design and web build to rebuild it for customers, and routed online enquiries straight to the sales team as notifications.',
       'work.home.caption': 'The rebuilt first screen',

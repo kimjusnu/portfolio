@@ -28,7 +28,7 @@ window.i18nStrings = {
     'r.exp.1.role': 'Engineer, full-time · web development and operation',
     'r.exp.1.when': '2025.07 — Present',
     'r.exp.1.a':
-      '<strong>My Feed</strong> — monitoring screens, admin and web notifications; requests cut from 98 to 50, server-rendered response size by up to 42%.',
+      '<strong>My Feed</strong> — monitoring screens, admin and web notifications; requests cut from 98 to 50 (staging), and each notification poll from six requests to one.',
     'r.exp.1.c':
       '<strong>Homepage rebuild</strong> — rebuilt for customers, with online enquiries routed to the sales team; contributed to a deal with a feed company.',
     'r.exp.1.d': 'Built a mask-labelling tool for failed segmentations; proposed SAM2, which the AI engineer applied.',

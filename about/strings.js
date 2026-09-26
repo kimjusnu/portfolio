@@ -20,8 +20,8 @@ window.i18nStrings = {
     'ab.st1.link': 'See the related case',
     'ab.st2.h': 'Heavy screens, lighter',
     'ab.st2.p':
-      'I pin down bottlenecks with per-stage timing logs and cut requests and server-rendered response size.',
-    'ab.st2.meta': 'Requests 98→50 · response size up to −42%',
+      'I find slow stages with per-stage timing logs, then cut unneeded requests and mobile horizontal overflow.',
+    'ab.st2.meta': 'Requests 98→50 (staging) · 375px overflow 163→0',
     'ab.st3.h': 'Shared screen rules with teammates',
     'ab.st3.p':
       'I worked out requirements and design with the app developer, and built against screen rules shared across web and app.',

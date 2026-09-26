@@ -42,12 +42,11 @@ window.i18nStrings = {
     'mf.perf.label': 'Fewer requests',
     'mf.perf.title': 'Find the slow stage first,<br>then cut.',
     'mf.perf.sub': 'I added per-stage timing logs to pin down the bottleneck before fixing it.',
-    'mf.perf.size': 'Server-rendered response size, 22.95MB → 13.24MB',
     'mf.nt.label': 'Notifications',
     'mf.nt.title': 'Two polls,<br>opposite policies.',
     'mf.nt.a.label': 'Unread count',
     'mf.nt.a.h': 'Pauses when nobody is looking',
-    'mf.nt.a.p': 'Cut from six checks a minute to one, and stopped in hidden tabs.',
+    'mf.nt.a.p': 'Cut each poll from six requests to one, and stopped it in hidden tabs.',
     'mf.nt.b.label': 'Covering dropped push notifications',
     'mf.nt.b.h': 'Keeps running in hidden tabs',
     'mf.nt.b.p':
@@ -71,6 +70,6 @@ window.i18nStrings = {
       'The supporting view is at a pilot stage on a few farms. It does not make the remaining-feed estimate more accurate.',
     'mf.limit.3': 'It is an internal service, so there is no public link.',
     'mf.next.title': 'Next: the company homepage rebuild',
-    'mf.next.sub': 'Turning an investor brochure into a site for customers.',
+    'mf.next.sub': 'Turning a company-profile site into a service-first landing page.',
   },
 };

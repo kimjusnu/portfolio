@@ -6,11 +6,11 @@ window.i18nStrings = {
   en: {
     'meta.title': 'AimBe Lab homepage | Junsu Kim · Frontend Developer',
     'meta.description':
-      'Rebuilt the company homepage from an investor brochure into a site for customers, and routed online enquiries to the sales team as notifications.',
+      'Rebuilt the company homepage from a company-profile site into a service-first landing page, and routed online enquiries to the sales team as notifications.',
 
     'hp.crumb': 'Company homepage',
     'hp.label': 'AimBe Lab · company homepage',
-    'hp.title': 'From an investor brochure,<br>to a site for customers.',
+    'hp.title': 'From a company-profile site,<br>to a service-first landing page.',
     'hp.sub':
       'I rebuilt the company homepage around its products and services for customers, and routed online enquiries to the sales team as notifications.',
     'hp.role': 'Planning · design · web build · enquiry notifications',
@@ -29,9 +29,9 @@ window.i18nStrings = {
     'hp.st.label': 'What changed',
     'hp.st.title': 'Decide who it is for,<br>then let enquiries arrive.',
     'hp.s1.label': 'Structure',
-    'hp.s1.h': 'From investors to customers',
+    'hp.s1.h': 'From the company to the service',
     'hp.s1.p':
-      'A structure that introduced the company to investors became one that helps customers understand the products and services.',
+      'Several company-profile pages (history, awards) became one page built around My Feed features and enquiries.',
     'hp.s2.label': 'Enquiries',
     'hp.s2.h': 'Enquiries that reach sales directly',
     'hp.s2.p':

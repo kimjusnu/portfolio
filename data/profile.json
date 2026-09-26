@@ -86,7 +86,7 @@
   "contact": {
     "email": "junsu4621@naver.com",
     "github": "https://github.com/kimjusnu",
-    "portfolio": "https://kimjusnu.github.io/sansae/",
+    "portfolio": "https://kimjusnu.github.io/portfolio/",
     "blog": "https://dietisdie.tistory.com/"
   },
   "strengths": [
@@ -126,7 +126,7 @@
       "period": "2025-07 ~ 현재",
       "highlights": [
         "My Feed: 농장 모니터링 화면·관리자·웹 알림 개발과 운영",
-        "My Feed: 모니터링 화면 요청 98건→50건, 서버 렌더 응답 크기 최대 −42%, 구간별 소요시간 로그로 병목 특정 (2026-02·07 커밋 근거)",
+        "My Feed: 모니터링 화면 요청 98건→50건(스테이징 측정), 알림 폴링 1회당 요청 6→1개(운영 반영), 구간별 소요시간 로그로 느린 구간 특정 (2026-02·07 커밋 근거)",
         "My Feed: 분할 실패 이미지 마스크 라벨링 기능 구현, SAM2 교체 조사·제안(적용은 AI 담당자)",
         "회사 홈페이지: 투자자용 소개를 고객 대상 소개로 개편, 온라인 도입 문의를 사업팀 알림으로 연결 (사료회사 거래 성사에 기여)"
       ]
