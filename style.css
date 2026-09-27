@@ -219,6 +219,16 @@ small { font-size: 0.86em; color: var(--muted); font-weight: 450; }
 .next strong::after { content: " →"; color: var(--accent); display: inline-block; transition: transform 0.35s var(--ease); }
 .next:hover strong::after { transform: translateX(8px); }
 
+/* numbers told the same way as the hero: the old value is struck through, the new one appears */
+.swap { white-space: nowrap; }
+.swap del { text-decoration: none; color: var(--faint); position: relative; font-weight: 500; }
+.swap del::after { content: ""; position: absolute; left: -6%; right: -6%; top: 52%; height: 2px; background: currentColor; transform-origin: left; }
+.swap ins { text-decoration: none; color: var(--accent); }
+.js-swap .swap del::after { transform: scaleX(0); }
+.js-swap .swap ins { opacity: 0; display: inline-block; transform: translateY(0.3em); }
+.js-swap .swap.on del::after { transform: none; transition: transform 0.5s var(--ease) 0.2s; }
+.js-swap .swap.on ins { opacity: 1; transform: none; transition: opacity 0.5s var(--ease) 0.75s, transform 0.5s var(--ease) 0.75s; }
+
 /* ---------- extras: latest commit, ⌘K palette, zoom ---------- */
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .activity { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 6px; margin: 28px 0 0; min-height: 1.6em; font: 500 13px/1.6 var(--mono); color: var(--faint); max-width: 720px; }

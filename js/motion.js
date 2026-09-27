@@ -18,7 +18,6 @@
   // hero: 불편하게 (harder) is struck through, collapses, and 편하게 (easier) takes its place.
   // main.js swaps the language before this runs and calls playHero again after every toggle.
   const hero = document.querySelector(".intro");
-  const ins = hero?.querySelector(".fix ins");
   let doneTimer = 0;
   const finish = () => { clearTimeout(doneTimer); hero.classList.add("done"); };
   function playHero() {
@@ -32,6 +31,8 @@
       return;
     }
     hero.style.setProperty("--del-w", `${del.getBoundingClientRect().width}px`);
+    // look the word up again: switching language rebuilds the heading, so a reference kept from load is stale
+    const ins = hero.querySelector(".fix ins");
     hero.style.setProperty("--ins-w", `${ins.scrollWidth}px`); // ins is 0 wide while pending; scrollWidth is its text
     void hero.offsetWidth; // restart the CSS animations
     hero.classList.remove("pending");
@@ -39,11 +40,25 @@
     doneTimer = setTimeout(finish, 6000); // fallback if animation events never fire
   }
   // finish when 편하게 has actually appeared: the animation clock starts at first paint, not at load
-  ins?.addEventListener("animationend", (e) => e.animationName === "pop" && finish());
+  hero?.addEventListener("animationend", (e) => e.animationName === "pop" && finish()); // bubbles up from whichever ins is current
   if (hero && !reduce) hero.classList.add("pending"); // hide 편하게 until the fonts are in and the swap starts
   window.playHero = () => { hero?.classList.add("pending"); playHero(); };
   // measure widths with the web font, not the fallback that shows while it loads
   (document.fonts?.ready || Promise.resolve()).then(playHero);
+
+  // numbers: strike the old value and bring in the new one when it scrolls into view
+  const swaps = [...document.querySelectorAll(".swap")];
+  if (swaps.length && !reduce) {
+    document.documentElement.classList.add("js-swap");
+    const seen = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        e.target.classList.add("on");
+        seen.unobserve(e.target);
+      }
+    }, { rootMargin: "0px 0px -15% 0px" });
+    swaps.forEach((el) => seen.observe(el));
+  }
 
   // work rows: a screenshot follows the cursor (fine pointers only; hidden by CSS on small screens)
   const preview = document.querySelector(".preview");
