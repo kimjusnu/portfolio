@@ -100,7 +100,7 @@ window.STRINGS_EN = {
  "mf.limit.3": "It is an internal service, so there is no public link.",
  "mf.limit.4": "Screens were captured with test accounts and contain no real farm data.",
  "mf.limit.h": "About the numbers and scope",
- "mf.me.p": "Monitoring screens, admin and web notifications; fewer requests and smaller responses; consolidated shared UI; language packs; the mask-labelling tool.",
+ "mf.me.p": "Monitoring screens, admin and web notifications, the permission layer, fewer requests, shared UI clean-up, language packs, and the labelling screen for retraining.",
  "mf.nt.a.h": "Pauses when nobody is looking",
  "mf.nt.a.label": "Unread count",
  "mf.nt.a.p": "Cut each poll from six requests to one, and stopped it in hidden tabs.",
