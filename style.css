@@ -197,7 +197,7 @@ small { font-size: 0.86em; color: var(--muted); font-weight: 450; }
 .vs-tag { font: 500 12px/1.4 var(--mono); color: var(--muted); margin: 0 0 8px; }
 .versus strong { display: block; margin-bottom: 6px; }
 .versus p:not(.vs-tag) { font-size: 14px; color: var(--muted); margin: 0; }
-.code { margin: 8px 0 0; padding: 18px 20px; border-radius: 10px; background: var(--tint); overflow-x: auto; font: 13.5px/1.7 var(--mono); }
+.code { font-variant-ligatures: none; margin: 8px 0 0; padding: 18px 20px; border-radius: 10px; background: var(--tint); overflow-x: auto; font: 13.5px/1.7 var(--mono); }
 
 .phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 3vw, 40px); max-width: 900px; margin-bottom: clamp(72px, 9vw, 120px); }
 .phones figure { margin: 0; }
