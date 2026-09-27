@@ -138,7 +138,7 @@
       for (const [unit, size] of [["year", 31536000], ["month", 2592000], ["day", 86400], ["hour", 3600], ["minute", 60]]) {
         if (Math.abs(sec) >= size) return rtf.format(Math.round(sec / size), unit);
       }
-      return rtf.format(0, "minute");
+      return t("방금", "just now");
     };
     const paint = (d) => {
       el.classList.remove("loading");
@@ -163,7 +163,8 @@
     try {
       const res = await fetch("https://api.github.com/users/kimjusnu/events/public?per_page=30");
       if (!res.ok) throw new Error(`events ${res.status}`);
-      const push = (await res.json()).find((e) => e.type === "PushEvent" && e.payload?.head);
+      // kimjusnu/portfolio only receives deploy commits of this site; skip it
+      const push = (await res.json()).find((e) => e.type === "PushEvent" && e.payload?.head && e.repo.name !== "kimjusnu/portfolio");
       if (!push) throw new Error("no public push");
       // push events no longer carry commit messages; ask for the head commit
       let message = "";
