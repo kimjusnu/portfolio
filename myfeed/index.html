@@ -59,6 +59,10 @@
           <li><strong data-i18n="mf.ui.1.h">메뉴를 찾기 쉽게</strong> <span data-i18n="mf.ui.1.p">고객 문의에서 메뉴를 찾기 어렵다는 점을 확인하고, 주요 작업으로 가는 경로와 화면 가독성을 조정했습니다.</span></li>
           <li><strong data-i18n="mf.ui.2.h">한 곳에서 고치는 공통 UI</strong> <span data-i18n="mf.ui.2.p">여러 페이지에 복제돼 있던 공통 UI를 한 곳에서 수정할 수 있게 정리했습니다.</span></li>
           <li><strong data-i18n="mf.ui.3.h">언어별 키·값 문구</strong> <span data-i18n="mf.ui.3.p">화면 문구를 언어별 키·값으로 관리하도록 바꿔, 번역 API 응답을 기다리던 흐름을 개선했습니다.</span></li>
+          <li><strong data-i18n="mf.ui.4.h">계정마다 다른 표 컬럼</strong> <span data-i18n="mf.ui.4.p">회사·대리점·농장 계정마다 필요한 컬럼이 달라, 권한 클래스로 표시할 컬럼을 나누고 1350px 이하에서는 핵심 컬럼만 남겼습니다. 세로로 길던 표는 페이지로 나눴습니다.</span></li>
+          <li><strong data-i18n="mf.ui.5.h">목록과 상세의 순서 맞추기</strong> <span data-i18n="mf.ui.5.p">목록의 정렬 순서와 상세 화면의 화살표 이동 순서가 달랐습니다. API 쪽 재정렬로 풀리지 않자, 화면에 실제로 그려진 순서를 브라우저 저장소로 넘겨 상세 화면이 그 순서를 따르게 했습니다.</span></li>
+          <li><strong data-i18n="mf.ui.6.h">깜빡이던 툴팁 이미지</strong> <span data-i18n="mf.ui.6.p">차트 툴팁의 이미지를 바로 바꿔 끼우던 방식을, 미리 불러온 뒤 교체하도록 바꿔 깜빡임을 없앴습니다.</span></li>
+          <li><strong data-i18n="mf.ui.7.h">장애 디바이스 보고서를 한 번에</strong> <span data-i18n="mf.ui.7.p">AI 브라우저로 농장별 장애 현황을 모으던 시도가 데이터가 많은 계정에서 막히자, 관리자 API를 병렬로 모아 엑셀 보고서로 바로 내려받는 기능으로 방향을 바꿨습니다.</span></li>
         </ul>
         <p class="figure-num"><b class="swap"><del>163px</del> <ins>0px</ins></b> <span data-i18n="fact.overflow">모바일 가로 넘침 (375px 폭)</span></p>
       </div>
@@ -112,8 +116,8 @@
       <div class="body">
         <h2 id="c4" data-i18n="mf.ai.title">AI가 낸 결과를, 사람이 판단할 수 있게.</h2>
         <ul class="points">
-          <li><strong data-i18n="mf.ai.1.h">보조 시각화</strong> <span data-i18n="mf.ai.1.p">잔량 수치만으로는 상태를 판단하기 어렵다는 고객 반응을 바탕으로, 사료빈 내부 형태를 보여 주는 보조 시각화를 개발하고 일부 농장에서 피드백을 받았습니다.</span></li>
-          <li><strong data-i18n="mf.ai.2.h">버려지던 이미지를 학습 데이터로</strong> <span data-i18n="mf.ai.2.p">모델이 분할에 실패해 버려지던 이미지를 사람이 마스크로 다시 라벨링해 재학습에 쓰자고 제안하고, 그 라벨링 화면을 만들었습니다. 라벨링한 이미지는 실제 재학습에 쓰였고, 지금은 모델이 스스로 분류하도록 바뀌어 이 방식은 더 쓰지 않습니다.</span></li>
+          <li><strong data-i18n="mf.ai.1.h">보조 시각화</strong> <span data-i18n="mf.ai.1.p">도넛 그래프의 퍼센트만으로는 상태를 판단하기 어렵다는 고객 반응을 바탕으로, 사료빈 모양의 2D 그림과 촬영 사진을 나란히 보여 주는 보조 시각화를 만들어 2개 농장의 웹·앱에 먼저 적용했습니다. 웹과 앱이 각자 계산해 값이 달라질 수 있어, 계산을 서버로 옮기는 일을 다음 과제로 남겼습니다.</span></li>
+          <li><strong data-i18n="mf.ai.2.h">버려지던 이미지를 학습 데이터로</strong> <span data-i18n="mf.ai.2.p">모델이 분할에 실패해 버려지던 이미지를 사람이 마스크로 다시 라벨링해 재학습에 쓰자고 제안하고, 그 라벨링 화면을 만들었습니다. 원형·다각형으로 영역을 고치는 Canvas 편집기, 이미지 크기와 상관없이 0~1로 정규화한 좌표 저장, 재학습 요청 뒤 진행 상태를 배지로 보여 주는 흐름입니다. 라벨링한 이미지는 실제 재학습에 쓰였고, 지금은 모델이 스스로 분류하도록 바뀌어 이 방식은 더 쓰지 않습니다.</span></li>
         </ul>
       </div>
     </section>
@@ -129,13 +133,14 @@
     <section class="chapter wrap" id="homepage" aria-labelledby="c5">
       <p class="no">05 · <span data-i18n="hp.label">에임비랩 · 회사 홈페이지</span></p>
       <div class="body">
-        <h2 id="c5" data-i18n="hp.title">회사 소개 사이트에서, 서비스를 보여 주는 사이트로.</h2>
-        <p data-i18n="hp.sub">회사 홈페이지를 고객 대상 제품·서비스 소개 중심으로 다시 구성하고, 온라인 도입 문의를 사업팀 알림으로 연결했습니다.</p>
+        <h2 id="c5" data-i18n="hp.title">투자자(IR) 중심 사이트에서, 고객 문의로 이어지는 사이트로.</h2>
+        <p data-i18n="hp.sub">투자자(IR) 중심으로 짜인 회사 홈페이지를 고객이 도입 문의까지 이어지는 구조로 개편하는 계획을 세우고, 기획·디자인·구현까지 맡았습니다.</p>
         <ul class="points">
-          <li><strong data-i18n="hp.s1.h">회사 소개에서 서비스 소개로</strong> <span data-i18n="hp.s1.p">회사 연혁·수상 같은 회사 소개 위주의 여러 페이지를, 마이피드 기능과 도입 문의 중심의 한 페이지로 바꿨습니다.</span></li>
-          <li><strong data-i18n="hp.s2.h">사업팀에 바로 닿는 문의</strong> <span data-i18n="hp.s2.p">온라인 도입 문의가 사업팀 알림으로 전달되게 연결했습니다. 이렇게 마련한 문의 접점은 사료회사와의 거래 성사에 기여했습니다.</span></li>
+          <li><strong data-i18n="hp.s1.h">IR 중심에서 고객 전환형으로</strong> <span data-i18n="hp.s1.p">회사 연혁·수상 같은 회사 소개 위주의 여러 페이지를, 마이피드 기능과 도입 문의 중심의 한 페이지로 바꿨습니다.</span></li>
+          <li><strong data-i18n="hp.s2.h">사업팀에 바로 닿는 문의</strong> <span data-i18n="hp.s2.p">도입 문의를 서버에서 검증한 뒤 사업팀 Flow 업무로 등록되게 연결했습니다. 이렇게 마련한 문의 접점은 사료회사와의 거래 성사에 기여했습니다.</span></li>
+          <li><strong data-i18n="hp.s3.h">데이터로 판단하기</strong> <span data-i18n="hp.s3.p">GA4 이벤트 27개를 정의해 문의 폼 제출과 연락처 클릭을 추적했고, 분석에서 홈페이지 유입 대부분이 모바일이고 체류가 짧다는 점을 확인했습니다. 리뉴얼 계획에는 배포 뒤 볼 지표(방문, 이탈, CTA 클릭, 문의 제출 등)를 먼저 정해 두었고, 봇 트래픽은 성과 지표에서 빼되 원천 데이터는 Clarity에 남기는 기준을 세웠습니다.</span></li>
         </ul>
-        <p class="figure-num"><span data-i18n="hp.role">기획 · 디자인 · 웹 구현 · 문의 알림 연결</span> · Next.js · TypeScript · <a href="https://aimbelab.com" data-i18n="page.openSite">사이트 열기</a></p>
+        <p class="figure-num"><span data-i18n="hp.role">기획 · 디자인 · 웹 구현 · 문의 연동</span> · Next.js · TypeScript · <a href="https://aimbelab.com" data-i18n="page.openSite">사이트 열기</a></p>
       </div>
     </section>
     <div class="pair wrap" data-reveal>
@@ -146,8 +151,8 @@
     <details class="limits wrap">
       <summary data-i18n="mf.limit.h">수치와 범위에 대해</summary>
       <ul>
-        <li data-i18n="mf.limit.1">요청 수·응답 크기·조회 횟수는 변경 커밋에서 확인한 값입니다. 모든 사용자 환경의 체감 속도를 잰 값은 아닙니다.</li>
-        <li data-i18n="mf.limit.2">보조 시각화는 일부 농장에 시범 적용한 단계입니다. 시각화가 잔량 추정의 정확도를 높이지는 않습니다.</li>
+        <li data-i18n="mf.limit.1">알림 요청 수는 변경 커밋에서 확인하고 운영에 반영된 값이고, 모니터링 화면 요청 수(98→50)는 스테이징에서 잰 값입니다. 모든 사용자 환경의 체감 속도를 잰 값은 아닙니다.</li>
+        <li data-i18n="mf.limit.2">보조 시각화는 2개 농장에 먼저 적용한 단계입니다. 시각화가 잔량 추정의 정확도를 높이지는 않습니다.</li>
         <li data-i18n="mf.limit.3">사내 서비스라 공개 링크는 없습니다.</li>
         <li data-i18n="mf.limit.4">화면은 시험용 계정으로 찍었고, 실제 농가 정보는 담지 않았습니다.</li>
       </ul>
