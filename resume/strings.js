@@ -17,7 +17,11 @@ window.i18nStrings = {
     'r.pdfHref': 'resume-en.pdf',
     'r.pdfName': 'Junsu-Kim-Resume.pdf',
     'r.backToSite': 'Portfolio',
-    'r.photoAlt': 'Photograph of Junsu Kim',
+    'r.photoAlt': 'ASCII portrait of Junsu Kim, made from a photo with readme_portrait',
+    'r.awards.4': 'Excellence Award, Everyday-Flip AI App Idea Contest',
+    'r.awards.5': '4th place, Fair Workplace Contest (KOCCA)',
+    'r.awards.6': 'Honorable mention, Korail Retail idea contest',
+    'r.awards.7': 'Honorable mention, Suncheon youth policy idea contest',
 
     'r.summary.title': 'Summary',
     'r.summary.body':

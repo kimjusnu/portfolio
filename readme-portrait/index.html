@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.titleRp">readme_portrait · 김준수</title>
+  <meta name="description" content="사진이나 GitHub 아바타를 README에 넣는 움직이는 ASCII 초상 SVG로 바꾸는 오픈소스 도구를 만든 기록.">
+  <meta name="theme-color" content="#fafaf7">
+  <link rel="canonical" href="https://kimjusnu.github.io/portfolio/readme-portrait/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="김준수 포트폴리오">
+  <meta property="og:title" content="readme_portrait · 김준수">
+  <meta property="og:description" content="사진이나 GitHub 아바타를 README용 움직이는 ASCII 초상 SVG로 바꾸는 오픈소스 도구. 웹 스튜디오, npm CLI, GitHub Action.">
+  <meta property="og:url" content="https://kimjusnu.github.io/portfolio/readme-portrait/">
+  <meta property="og:image" content="https://kimjusnu.github.io/portfolio/assets/og-rp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/wanted-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="a11y.skip">본문 바로가기</a>
+  <header class="top wrap">
+    <a class="name" href="../" data-i18n="brand.name">김준수</a>
+    <nav class="nav" aria-label="주 메뉴" data-i18n-aria="nav.label">
+      <a href="../#work" data-i18n="sec.work">작업</a>
+      <a href="../#career" data-i18n="career.label">경력</a>
+      <a href="../#contact" data-i18n="contact.label">연락</a>
+      <button type="button" id="lang" lang="en">EN</button>
+    </nav>
+  </header>
+
+  <main id="main" class="case">
+    <header class="case-head wrap">
+      <a class="back" href="../#work" data-i18n="page.backWork">작업 목록으로</a>
+      <p class="meta"><span data-i18n="p.solo">개인 프로젝트</span><span>2026.09</span></p>
+      <h1 data-i18n="rp.title">사진 한 장을, README 속 움직이는 초상으로.</h1>
+      <p class="lede" data-i18n="rp.lede">사진이나 GitHub 아바타를 README에 넣는 ASCII 초상 SVG로 바꾸는 오픈소스 도구입니다. 웹 스튜디오, npm CLI, GitHub Action으로 배포했습니다.</p>
+      <dl class="spec">
+        <div><dt data-i18n="page.role">담당 역할</dt><dd data-i18n="rp.role">기획, 디자인, 개발, 배포를 혼자 맡았습니다.</dd></div>
+        <div><dt>Stack</dt><dd>JavaScript · SVG(SMIL) · Node.js CLI · GitHub Actions</dd></div>
+        <div><dt data-i18n="rp.linksH">링크</dt><dd><a href="https://kimjusnu.github.io/readme_portrait/">Web</a> · <a href="https://github.com/kimjusnu/readme_portrait">GitHub</a> · <a href="https://www.npmjs.com/package/readme-portrait">npm</a></dd></div>
+      </dl>
+    </header>
+
+    <figure class="shot wide" data-reveal>
+      <img src="../assets/shots/rp-headline-en.webp" srcset="../assets/shots/rp-headline-en-1000.webp 1000w, ../assets/shots/rp-headline-en.webp 2000w" sizes="(max-width: 1440px) 100vw, 1440px" alt="readme_portrait 첫 화면의 헤드라인. Your Face, Typed Into Your README." width="2000" height="1250" data-i18n-alt="alt.rpHeadline">
+      <figcaption data-i18n="cap.rpHeadline">사이트 첫 화면의 헤드라인. 명령줄 한 줄과 함께 무엇을 하는 도구인지부터 보여 줍니다.</figcaption>
+    </figure>
+
+    <section class="chapter wrap" aria-labelledby="r1">
+      <p class="no">01 · <span data-i18n="rp.c1.label">GitHub 안에서 움직이게</span></p>
+      <div class="body">
+        <h2 id="r1" data-i18n="rp.c1.title">README가 허용하는 것만으로 만들었습니다.</h2>
+        <ul class="points">
+          <li><strong data-i18n="rp.c1.1.h">스크립트 없는 애니메이션</strong> <span data-i18n="rp.c1.1.p">GitHub는 README 이미지에서 스크립트와 웹 글꼴을 막습니다. 타이핑 효과를 SVG 자체 애니메이션(SMIL)으로만 만들어 프로필에서 실제로 재생되게 했습니다.</span></li>
+          <li><strong data-i18n="rp.c1.2.h">애니메이션이 멈춰도 보이게</strong> <span data-i18n="rp.c1.2.p">모든 줄은 기본으로 보이고, 애니메이션은 나타나는 시점만 늦춥니다. 메일 미리보기나 공유 카드처럼 애니메이션이 돌지 않는 곳에서도 초상이 온전히 보입니다.</span></li>
+        </ul>
+      </div>
+    </section>
+    <figure class="shot" data-reveal>
+      <img src="../assets/shots/rp-gallery.webp" srcset="../assets/shots/rp-gallery-1000.webp 1000w, ../assets/shots/rp-gallery.webp 2000w" sizes="(max-width: 1200px) 100vw, 1200px" alt="명화를 ASCII 글자로 다시 그린 초상 세 점" width="2000" height="1250" loading="lazy" data-i18n-alt="alt.rpGallery">
+      <figcaption data-i18n="cap.rpGallery">갤러리의 카드는 모두 이 도구로 만든 SVG입니다. 명화, 애니풍, 우주 사진 가운데 골라 볼 수 있습니다.</figcaption>
+    </figure>
+
+    <section class="chapter wrap" aria-labelledby="r2">
+      <p class="no">02 · <span data-i18n="rp.c2.label">스튜디오</span></p>
+      <div class="body">
+        <h2 id="r2" data-i18n="rp.c2.title">결과가 왜 이렇게 나왔는지 보이게.</h2>
+        <p data-i18n="rp.c2.p">원본 위의 틀을 끌어 구도를 잡고, 대비 조정이 단계마다 어떻게 바뀌는지 나란히 확인합니다. 만든 초상은 README에 붙일 코드와 함께 바로 내려받을 수 있습니다.</p>
+      </div>
+    </section>
+    <figure class="shot" data-reveal>
+      <img src="../assets/shots/rp-studio.webp" srcset="../assets/shots/rp-studio-1000.webp 1000w, ../assets/shots/rp-studio.webp 2000w" sizes="(max-width: 1200px) 100vw, 1200px" alt="스튜디오 화면. 원본, 미리보기, README 코드 창." width="2000" height="1250" loading="lazy" data-i18n-alt="alt.rpStudio">
+      <figcaption data-i18n="cap.rpStudio">스튜디오. 원본, 미리보기, README 코드를 한 화면에 둡니다.</figcaption>
+    </figure>
+
+    <section class="chapter wrap" aria-labelledby="r3">
+      <p class="no">03 · <span data-i18n="rp.c3.label">배포</span></p>
+      <div class="body">
+        <h2 id="r3" data-i18n="rp.c3.title">웹, 명령줄, 자동화 어디서든 같은 결과로.</h2>
+        <ul class="points">
+          <li><strong data-i18n="rp.c3.1.h">npm CLI</strong> <span data-i18n="rp.c3.1.p">사이트와 같은 변환기를 명령줄에서 돌립니다. 예시 아바타 기준으로 CLI 결과가 브라우저 결과와 바이트 단위로 같은지 테스트로 확인합니다.</span></li>
+          <li><strong data-i18n="rp.c3.2.h">GitHub Action</strong> <span data-i18n="rp.c3.2.p">프로필 저장소에 워크플로를 넣으면 아바타가 바뀔 때 초상을 다시 그립니다.</span></li>
+          <li><strong data-i18n="rp.c3.3.h">AI 코딩 에이전트용 스킬</strong> <span data-i18n="rp.c3.3.p">Claude Code 같은 에이전트에게 부탁하면 프로필 저장소를 찾아 SVG를 만들고, 커밋 전에 확인을 받습니다.</span></li>
+        </ul>
+        <pre class="code"><code>npx readme-portrait octocat
+npx readme-portrait me.jpg --style matrix --contrast local</code></pre>
+      </div>
+    </section>
+    <figure class="shot" data-reveal>
+      <img src="../assets/shots/rp-tech.webp" srcset="../assets/shots/rp-tech-1000.webp 1000w, ../assets/shots/rp-tech.webp 2000w" sizes="(max-width: 1200px) 100vw, 1200px" alt="기술 설명 구간" width="2000" height="1250" loading="lazy" data-i18n-alt="alt.rpTech">
+    </figure>
+
+    <a class="next wrap" href="../myfeed/"><span data-i18n="page.next">이어서 보기</span><strong data-i18n="mf.title">농가가 쓰는 화면을, 가볍고 읽기 쉽게.</strong></a>
+  </main>
+
+  <footer class="foot wrap"><span data-i18n="footer.bottom">© 2026 김준수 · 프론트엔드 개발자</span></footer>
+
+  <script src="../js/strings-en.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/motion.js"></script>
+  <script src="../js/extras.js"></script>
+</body>
+</html>

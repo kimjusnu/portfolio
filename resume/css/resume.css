@@ -1,0 +1,434 @@
+/* =========================================================
+   Resume — one A4 page, screen and print from the same markup
+   Requires base.css (tokens, reset, type) and i18n.css
+
+   Laid out in millimetres so the on-screen sheet and the printed
+   page are the same object rather than two approximations of each
+   other. Type is in px chosen to land on sensible point sizes:
+   at 96dpi 12.6px prints as ~9.5pt.
+
+   Single column on purpose. Applicant tracking systems extract text
+   in document order, and a full-height sidebar interleaves with the
+   main column and comes out scrambled. The one two-up block is at
+   the end and each side is self-contained, so it extracts cleanly.
+   ========================================================= */
+
+.resume-body {
+  background: var(--page-bg-secondary);
+  padding: 0 0 40px;
+}
+
+/* ---------------------------------------------------------
+   Screen-only toolbar
+   --------------------------------------------------------- */
+.resume-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--gutter);
+  background: rgba(var(--page-bg-rgb), 0.86);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.resume-bar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.resume-bar-back,
+.resume-print {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  border-radius: var(--radius-pill);
+  background: rgba(var(--surface-rgb), 0.82);
+  color: var(--primary-700);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: border-color 180ms var(--ease), box-shadow 180ms var(--ease);
+}
+
+.resume-bar-back:hover,
+.resume-print:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 22px rgba(29, 78, 216, 0.09);
+}
+
+.resume-print {
+  color: var(--text-inverse);
+  border-color: transparent;
+  background: var(--skip-bg);
+}
+
+.resume-print:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+/* ---------------------------------------------------------
+   The sheet
+   --------------------------------------------------------- */
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: var(--space-7) auto;
+  padding: 14mm 15mm 12mm;
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  color: var(--text-primary);
+  font-size: 12.6px;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------
+   Header
+   --------------------------------------------------------- */
+.r-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding-bottom: 4mm;
+  border-bottom: 2px solid var(--primary-500);
+}
+
+.r-head h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.r-role {
+  margin: 3px 0 0;
+  color: var(--primary-600);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.r-contact {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 3px var(--space-6);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.r-contact li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 11.6px;
+}
+
+.r-contact svg {
+  flex: none;
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: var(--primary-500);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.r-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* The photo ships with the Korean resume only. Korean hiring expects one;
+   most English-language employers ask for its absence, and some screening
+   policies discard a CV that carries a face. */
+.r-photo {
+  flex: none;
+  width: 25mm;
+  height: auto;
+  border-radius: var(--radius-xs);
+  object-fit: cover;
+}
+
+html[data-lang='en'] .r-photo {
+  display: none;
+}
+
+.r-summary {
+  margin: 4mm 0 0;
+  color: var(--text-secondary);
+  font-size: 11.9px;
+  line-height: 1.55;
+}
+
+/* ---------------------------------------------------------
+   Sections
+   --------------------------------------------------------- */
+/* 4.5mm left the sheet sitting 0.1–0.4mm from spilling onto a second page, so
+   every added line turned into word-golf. Section spacing is the budget every
+   new line is paid out of: 4.5 → 3.4mm bought the AimBe rewrite, 3.4 → 3.0mm
+   (with the h2 gap at 2.0mm) bought the fourth award line. Sub-millimetre
+   steps here are not perceptible in the printed rhythm. */
+.r-section {
+  margin-top: 2.6mm;
+}
+
+.r-section h2 {
+  margin: 0 0 2.0mm;
+  padding-bottom: 1.5mm;
+  border-bottom: 1px solid var(--border-default);
+  color: var(--primary-700);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.r-item + .r-item {
+  margin-top: 3.0mm;
+}
+
+.r-item-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.r-item-head h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.r-when {
+  flex: none;
+  color: var(--text-tertiary);
+  font-size: 11.4px;
+  font-weight: 600;
+}
+
+.r-role-line {
+  margin: 1px 0 0;
+  color: var(--text-secondary);
+  font-size: 11.8px;
+}
+
+.r-item ul {
+  /* base.css strips list markers site-wide; here they earn their keep. */
+  list-style: disc;
+  margin: 2mm 0 0;
+  padding-left: 4.6mm;
+}
+
+.r-item li {
+  margin-top: 1.2mm;
+  color: var(--text-primary);
+}
+
+.r-item li::marker {
+  color: var(--primary-300);
+}
+
+.r-item strong {
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   Projects
+   --------------------------------------------------------- */
+.r-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4mm var(--space-7);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.r-proj-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.r-proj-head h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.r-proj-head a {
+  color: var(--primary-600);
+  font-size: 10.8px;
+  text-decoration: none;
+}
+
+.r-projects p {
+  margin: 1mm 0 0;
+  color: var(--text-secondary);
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.r-stack {
+  color: var(--text-tertiary) !important;
+  font-size: 10.6px !important;
+}
+
+/* ---------------------------------------------------------
+   Skills
+   --------------------------------------------------------- */
+.r-skills {
+  display: grid;
+  grid-template-columns: 22mm 1fr;
+  gap: 1.6mm var(--space-4);
+  margin: 0;
+}
+
+.r-skills dt {
+  color: var(--primary-700);
+  font-size: 11.6px;
+  font-weight: 700;
+}
+
+.r-skills dd {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 11.8px;
+}
+
+/* ---------------------------------------------------------
+   Education · Awards
+   --------------------------------------------------------- */
+/* Both columns are at their minimum: widening awards to stop a title wrapping
+   broke "Tech University of Korea" and the military line in English instead.
+   The ratio stays; a title that will not fit on one line gets shortened. */
+.r-columns {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-6);
+}
+
+.r-awards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.r-awards li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: 1.0mm;
+  color: var(--text-secondary);
+  font-size: 11.6px;
+}
+
+.r-year {
+  flex: none;
+  color: var(--text-tertiary);
+  font-size: 10.8px;
+}
+
+/* Certifications are not awards. Listing them on one line says so, and buys
+   back the three rows that pushed the sheet onto a second page. */
+.r-certs {
+  display: flex;
+  gap: var(--space-2);
+  margin: 2.4mm 0 0;
+  color: var(--text-secondary);
+  font-size: 11.2px;
+}
+
+.r-certs-label {
+  flex: none;
+  color: var(--primary-700);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   Narrow screens — the sheet stops pretending to be paper
+
+   `screen` is load-bearing. A4 is 794px wide at 96dpi, so without it this
+   query also matches the printed page box: every two-column grid would
+   collapse and the sheet would run to 351mm, spilling onto a second page.
+   --------------------------------------------------------- */
+@media screen and (max-width: 820px) {
+  .sheet {
+    width: auto;
+    min-height: 0;
+    margin: var(--space-5) var(--space-4);
+    padding: var(--space-7) var(--space-6);
+  }
+
+  .r-projects,
+  .r-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .r-contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------
+   Print
+   --------------------------------------------------------- */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .resume-bar {
+    display: none;
+  }
+
+  .resume-body {
+    background: #fff;
+    padding: 0;
+  }
+
+  /* On screen the sheet is held at a full A4 so it looks like paper. In print
+     that exactness works against it: 297mm of box on a 297mm page rounds up
+     often enough to spill a blank second page. Let the content set the height
+     and the page stays one. */
+  .sheet {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding-block: 10mm 8mm; /* room for the two awards added in 2026-09 while staying on one page */
+    box-shadow: none;
+  }
+
+  /* Backgrounds and the accent rules are the design, not decoration. */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* A link that prints its own href doubles the length of every line. */
+  a {
+    text-decoration: none;
+  }
+
+  .r-section,
+  .r-item,
+  .r-projects li {
+    break-inside: avoid;
+  }
+}

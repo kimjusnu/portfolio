@@ -10,8 +10,7 @@
 <meta name="author" content="김준수">
 <!-- 이력서는 검색 결과에 뜰 필요가 없고, 링크를 받은 사람만 보면 됩니다 -->
 <meta name="robots" content="noindex, follow">
-<link rel="icon" href="../favicon.ico" sizes="32x32">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <script>
 (function () {
   var root = document.documentElement;
@@ -32,15 +31,15 @@
   }
 })();
 </script>
-<link rel="stylesheet" href="../assets/css/base.css">
-<link rel="stylesheet" href="../assets/css/i18n.css">
-<link rel="stylesheet" href="../assets/css/resume.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/i18n.css">
+<link rel="stylesheet" href="css/resume.css">
 </head>
 <body class="resume-body">
 
 <!-- 화면에만 보이는 도구 모음. 인쇄물에는 나오지 않습니다. -->
 <div class="resume-bar">
-  <a class="resume-bar-back" href="../index.html">
+  <a class="resume-bar-back" href="../">
     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7.5H3M6.5 4L3 7.5 6.5 11"/></svg>
     <span data-i18n="r.backToSite">포트폴리오</span>
   </a>
@@ -85,8 +84,8 @@
         </li>
       </ul>
     </div>
-    <!-- 사진은 한국어판에만 나갑니다. 영어판에서는 CSS가 숨깁니다. -->
-    <img class="r-photo" src="photo.webp" width="600" height="800" data-i18n-attr="alt:r.photoAlt" alt="김준수 증명사진" decoding="async">
+    <!-- 사진 자리는 직접 만든 readme_portrait로 증명사진을 바꾼 ASCII 초상입니다. 한국어판에만 나가고 영어판에서는 CSS가 숨깁니다. -->
+    <img class="r-photo" src="portrait.svg" width="560" height="635" data-i18n-attr="alt:r.photoAlt" alt="김준수의 ASCII 초상. 직접 만든 readme_portrait로 증명사진을 바꿨습니다." decoding="async">
   </header>
 
   <p class="r-summary" data-i18n="r.summary.body">농가에서 쓰는 사료 관리 웹서비스 마이피드의 웹 개발과 운영을 맡고 있는 프론트엔드 개발자입니다. 고객 문의를 요구사항으로 정리해 화면 구조와 사용성을 고쳤고, 구간별 소요시간 로그로 병목을 찾아 모니터링 화면의 요청 수를 98건에서 50건으로 줄였습니다. 회사 홈페이지를 고객 대상 소개로 개편하고 온라인 도입 문의를 사업팀 알림으로 연결했습니다.</p>
@@ -193,6 +192,8 @@
       <h2 data-i18n="r.awards.title">수상 · 자격</h2>
       <ul class="r-awards">
         <li><span data-i18n="r.awards.0">베리타스알파 교육기사 공모전 우수상 — 공개 데이터 분석</span><span class="r-year">2026.08</span></li>
+        <li><span data-i18n="r.awards.4">제1회 일상뒤집기 AI 어플 아이디어 공모전 우수상 — 전기예보</span><span class="r-year">2026</span></li>
+        <li><span data-i18n="r.awards.5">공정상생 일터만들기 공모전 4등 — 한국콘텐츠진흥원</span><span class="r-year">2026</span></li>
         <li><span data-i18n="r.awards.1">한국공학대전 우수상 — Eat Fit</span><span class="r-year">2025.12</span></li>
         <li><span data-i18n="r.awards.2">스나이퍼팩토리 부트캠프 우수상 — Wairi</span><span class="r-year">2024</span></li>
         <li><span data-i18n="r.awards.3">웅진씽크빅 × Udemy 부트캠프 2등 — Componique</span><span class="r-year">2024</span></li>
@@ -207,6 +208,6 @@
 </main>
 
 <script src="strings.js" defer></script>
-<script src="../assets/js/i18n.js" defer></script>
+<script src="js/i18n.js" defer></script>
 </body>
 </html>

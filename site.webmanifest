@@ -1,13 +1,13 @@
 {
-  "name": "김준수 · 프론트엔드 · AI 엔지니어 포트폴리오",
+  "name": "김준수 · 프론트엔드 개발자",
   "short_name": "김준수",
-  "description": "기획부터 디자인, 구현, 배포, 운영까지 직접 맡아 온 프론트엔드 · AI 엔지니어 김준수의 포트폴리오입니다.",
+  "description": "농가에서 쓰는 사료 관리 서비스의 웹 개발과 운영. 고객 문의를 요구사항으로 정리해 화면으로 옮깁니다.",
   "lang": "ko",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f7faff",
-  "theme_color": "#f7faff",
+  "background_color": "#fafaf7",
+  "theme_color": "#fafaf7",
   "icons": [
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },

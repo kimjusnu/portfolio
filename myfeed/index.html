@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.titleMf">마이피드 · 김준수</title>
+  <meta name="description" content="130여 농가가 쓰는 사료 관리 웹서비스 마이피드에서 모니터링 화면, 관리자, 웹 알림을 만들고 고친 기록.">
+  <meta name="theme-color" content="#fafaf7">
+  <link rel="canonical" href="https://kimjusnu.github.io/portfolio/myfeed/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="김준수 포트폴리오">
+  <meta property="og:title" content="마이피드 · 김준수">
+  <meta property="og:description" content="130여 농가가 쓰는 사료 관리 웹서비스에서 요청 수 98→50, 모바일 가로 넘침 163→0px, 알림 폴링 요청 6→1로 줄인 기록.">
+  <meta property="og:url" content="https://kimjusnu.github.io/portfolio/myfeed/">
+  <meta property="og:image" content="https://kimjusnu.github.io/portfolio/assets/og-myfeed.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="../assets/fonts/wanted-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="a11y.skip">본문 바로가기</a>
+  <header class="top wrap">
+    <a class="name" href="../" data-i18n="brand.name">김준수</a>
+    <nav class="nav" aria-label="주 메뉴" data-i18n-aria="nav.label">
+      <a href="../#work" data-i18n="sec.work">작업</a>
+      <a href="../#career" data-i18n="career.label">경력</a>
+      <a href="../#contact" data-i18n="contact.label">연락</a>
+      <button type="button" id="lang" lang="en">EN</button>
+    </nav>
+  </header>
+
+  <main id="main" class="case">
+    <header class="case-head wrap">
+      <a class="back" href="../#work" data-i18n="page.backWork">작업 목록으로</a>
+      <p class="meta"><span data-i18n="work.myfeed.tag">에임비랩 · 사내 서비스</span><span>2025.07 —</span></p>
+      <h1 data-i18n="mf.title">농가가 쓰는 화면을, 가볍고 읽기 쉽게.</h1>
+      <p class="lede" data-i18n="mf.sub">마이피드는 2026년 7월 기준 130여 농가가 사용하는 사료 관리 웹서비스입니다. 웹 개발과 운영을 맡아 농장 모니터링 화면, 관리자, 웹 알림을 만들고 고쳐 왔습니다.</p>
+      <dl class="spec">
+        <div><dt data-i18n="page.role">담당 역할</dt><dd data-i18n="mf.me.p">모니터링 화면·관리자·웹 알림 구현, 요청 수와 응답 크기 줄이기, 공통 UI 정리, 언어팩 전환, 마스크 라벨링 기능.</dd></div>
+        <div><dt data-i18n="mf.others.h">함께 일한 사람</dt><dd data-i18n="mf.others.p">앱 담당자와 요구사항·화면을 함께 정리했습니다. SAM2 모델 적용은 AI 담당자가 했습니다.</dd></div>
+        <div><dt>Stack</dt><dd>FastAPI · Jinja2 · JavaScript</dd></div>
+      </dl>
+    </header>
+
+    <figure class="shot wide" data-reveal>
+      <img src="../assets/shots/mf-farm-monitoring.webp" srcset="../assets/shots/mf-farm-monitoring-1000.webp 1000w, ../assets/shots/mf-farm-monitoring.webp 2000w" sizes="(max-width: 1440px) 100vw, 1440px" alt="농장 계정의 모니터링 화면. 사료빈마다 최신 내부 사진과 남은 양, 온도, 습도가 보입니다." width="2000" height="1250" data-i18n-alt="alt.mfFarm">
+      <figcaption data-i18n="cap.mfFarm">농장 계정으로 본 모니터링 화면. 사료빈마다 최신 내부 사진과 남은 양, 온도·습도를 한 카드에 모았습니다.</figcaption>
+    </figure>
+
+    <section class="chapter wrap" aria-labelledby="c1">
+      <p class="no">01 · <span data-i18n="mf.ui.label">화면 개선</span></p>
+      <div class="body">
+        <h2 id="c1" data-i18n="mf.ui.title">문의에서 시작해, 화면에서 끝냅니다.</h2>
+        <ul class="points">
+          <li><strong data-i18n="mf.ui.1.h">메뉴를 찾기 쉽게</strong> <span data-i18n="mf.ui.1.p">고객 문의에서 메뉴를 찾기 어렵다는 점을 확인하고, 주요 작업으로 가는 경로와 화면 가독성을 조정했습니다.</span></li>
+          <li><strong data-i18n="mf.ui.2.h">한 곳에서 고치는 공통 UI</strong> <span data-i18n="mf.ui.2.p">여러 페이지에 복제돼 있던 공통 UI를 한 곳에서 수정할 수 있게 정리했습니다.</span></li>
+          <li><strong data-i18n="mf.ui.3.h">언어별 키·값 문구</strong> <span data-i18n="mf.ui.3.p">화면 문구를 언어별 키·값으로 관리하도록 바꿔, 번역 API 응답을 기다리던 흐름을 개선했습니다.</span></li>
+        </ul>
+        <p class="figure-num"><b>163 → 0px</b> <span data-i18n="fact.overflow">모바일 가로 넘침 (375px 폭)</span></p>
+      </div>
+    </section>
+    <div class="phones wrap" data-reveal>
+      <figure><img src="../assets/shots/mf-m-dashboard.webp" alt="모바일 폭의 대시보드" width="750" height="1624" loading="lazy" data-i18n-alt="alt.mfM1"></figure>
+      <figure><img src="../assets/shots/mf-m-monitoring.webp" alt="모바일 폭의 모니터링 화면" width="750" height="1624" loading="lazy" data-i18n-alt="alt.mfM2"></figure>
+      <figure><img src="../assets/shots/mf-m-order.webp" alt="모바일 폭의 사료 주문 화면" width="750" height="1624" loading="lazy" data-i18n-alt="alt.mfM3"></figure>
+      <p class="phones-cap" data-i18n="cap.mfPhones">375px 폭에서 본 대시보드, 모니터링, 사료 주문 화면.</p>
+    </div>
+
+    <section class="chapter wrap" aria-labelledby="c2">
+      <p class="no">02 · <span data-i18n="mf.perf.label">요청 줄이기</span></p>
+      <div class="body">
+        <h2 id="c2" data-i18n="mf.perf.title">느린 구간을 먼저 찾고, 그다음에 줄였습니다.</h2>
+        <p data-i18n="w.c1.p">구간별 소요시간 로그로 느린 구간을 찾고, 사진 지연 로딩과 중복 호출 정리로 요청을 줄였습니다. 운영에는 공통 스크립트 제거만 반영됐습니다.</p>
+        <p class="figure-num"><b>98 → 50</b> <span data-i18n="fact.req">모니터링 화면 요청 수 (스테이징)</span></p>
+      </div>
+    </section>
+    <figure class="shot" data-reveal>
+      <img src="../assets/shots/mf-dashboard.webp" srcset="../assets/shots/mf-dashboard-1000.webp 1000w, ../assets/shots/mf-dashboard.webp 2000w" sizes="(max-width: 1200px) 100vw, 1200px" alt="회사 계정의 대시보드. 디바이스 수, 주문이 필요한 사료빈 비율, 대리점별 농장 지도와 사료빈 목록." width="2000" height="1250" loading="lazy" data-i18n-alt="alt.mfDash">
+      <figcaption data-i18n="cap.mfDash">사료회사 계정의 대시보드. 주문이 필요한 사료빈과 잔량이 부족한 사료빈을 먼저 보여 줍니다.</figcaption>
+    </figure>
+
+    <section class="chapter wrap" aria-labelledby="c3">
+      <p class="no">03 · <span data-i18n="mf.nt.label">알림</span></p>
+      <div class="body">
+        <h2 id="c3" data-i18n="mf.nt.title">목적이 다른 두 폴링, 반대 정책.</h2>
+        <div class="versus">
+          <div><p class="vs-tag" data-i18n="mf.nt.a.label">안 읽은 알림 개수</p><strong data-i18n="mf.nt.a.h">화면을 안 볼 때는 멈춤</strong><p data-i18n="mf.nt.a.p">폴링 1회당 요청을 6개에서 1개로 줄이고, 숨은 탭에서는 멈추게 했습니다.</p></div>
+          <div><p class="vs-tag" data-i18n="mf.nt.b.label">푸시가 끊겼을 때를 대비한 조회</p><strong data-i18n="mf.nt.b.h">숨은 탭에서도 유지</strong><p data-i18n="mf.nt.b.p">특정 브라우저에서 알림이 표시되지 않는 현상을 다른 브라우저와 비교하며 범위를 좁혔고, 이 조회는 계속 돌도록 두었습니다.</p></div>
+        </div>
+        <p class="figure-num"><b>6 → 1</b> <span data-i18n="fact.poll">알림 폴링 1회당 요청 (운영)</span></p>
+      </div>
+    </section>
+    <figure class="shot" data-reveal>
+      <img src="../assets/shots/mf-notiset.webp" srcset="../assets/shots/mf-notiset-1000.webp 1000w, ../assets/shots/mf-notiset.webp 2000w" sizes="(max-width: 1200px) 100vw, 1200px" alt="알림 설정 화면. 알림 종류별 켜고 끄기와 사료빈별 설정." width="2000" height="1250" loading="lazy" data-i18n-alt="alt.mfNoti">
+      <figcaption data-i18n="mf.nt.cap2">사료빈별 알림 설정</figcaption>
+    </figure>
+
+    <section class="chapter wrap" aria-labelledby="c4">
+      <p class="no">04 · <span data-i18n="mf.ai.label">AI 결과 화면</span></p>
+      <div class="body">
+        <h2 id="c4" data-i18n="mf.ai.title">AI가 낸 결과를, 사람이 판단할 수 있게.</h2>
+        <ul class="points">
+          <li><strong data-i18n="mf.ai.1.h">보조 시각화</strong> <span data-i18n="mf.ai.1.p">잔량 수치만으로는 상태를 판단하기 어렵다는 고객 반응을 바탕으로, 사료빈 내부 형태를 보여 주는 보조 시각화를 개발하고 일부 농장에서 피드백을 받았습니다.</span></li>
+          <li><strong data-i18n="mf.ai.2.h">마스크 라벨링 기능</strong> <span data-i18n="mf.ai.2.p">분할에 실패한 이미지를 다시 쓸 수 있도록 마스크 라벨링 기능을 만들고 데이터를 제공했습니다.</span></li>
+          <li><strong data-i18n="mf.ai.3.h">SAM2 교체 제안</strong> <span data-i18n="mf.ai.3.p">SAM2 교체를 조사해 제안했습니다. 모델 적용은 AI 담당자가 했습니다.</span></li>
+        </ul>
+      </div>
+    </section>
+    <figure class="shot" data-reveal>
+      <img src="../assets/shots/mf-sray.webp" srcset="../assets/shots/mf-sray-1000.webp 1000w, ../assets/shots/mf-sray.webp 2000w" sizes="(max-width: 1200px) 100vw, 1200px" alt="모니터링의 이미지 보기. 사료빈마다 모양에 맞춘 2D 잔량 그림과 실제 내부 사진이 나란히 있습니다." width="2000" height="1250" loading="lazy" data-i18n-alt="alt.mfSray">
+      <figcaption data-i18n="cap.mfSray">보조 시각화(S-Ray). 잔량을 도넛 그래프의 퍼센트로만 보여 주던 것을, 사료빈 모양에 맞춘 2D 그림과 실제 내부 사진을 나란히 두는 방식으로 바꿨습니다.</figcaption>
+    </figure>
+    <figure class="shot" data-reveal>
+      <img src="../assets/shots/mf-detail.webp" srcset="../assets/shots/mf-detail-1000.webp 1000w, ../assets/shots/mf-detail.webp 2000w" sizes="(max-width: 1200px) 100vw, 1200px" alt="사료빈 상세 화면. 내부 사진, 잔량과 신선도, 한 달간 잔량 그래프." width="2000" height="1250" loading="lazy" data-i18n-alt="alt.mfDetail">
+      <figcaption data-i18n="cap.mfDetail">사료빈 상세 화면. 한 달간 잔량 그래프에서 사료가 줄다가 입고되면 다시 차는 흐름이 보입니다.</figcaption>
+    </figure>
+
+    <section class="chapter wrap" id="homepage" aria-labelledby="c5">
+      <p class="no">05 · <span data-i18n="hp.label">에임비랩 · 회사 홈페이지</span></p>
+      <div class="body">
+        <h2 id="c5" data-i18n="hp.title">회사 소개 사이트에서, 서비스를 보여 주는 사이트로.</h2>
+        <p data-i18n="hp.sub">회사 홈페이지를 고객 대상 제품·서비스 소개 중심으로 다시 구성하고, 온라인 도입 문의를 사업팀 알림으로 연결했습니다.</p>
+        <ul class="points">
+          <li><strong data-i18n="hp.s1.h">회사 소개에서 서비스 소개로</strong> <span data-i18n="hp.s1.p">회사 연혁·수상 같은 회사 소개 위주의 여러 페이지를, 마이피드 기능과 도입 문의 중심의 한 페이지로 바꿨습니다.</span></li>
+          <li><strong data-i18n="hp.s2.h">사업팀에 바로 닿는 문의</strong> <span data-i18n="hp.s2.p">온라인 도입 문의가 사업팀 알림으로 전달되게 연결했습니다. 이렇게 마련한 문의 접점은 사료회사와의 거래 성사에 기여했습니다.</span></li>
+        </ul>
+        <p class="figure-num"><span data-i18n="hp.role">기획 · 디자인 · 웹 구현 · 문의 알림 연결</span> · Next.js · TypeScript · <a href="https://aimbelab.com" data-i18n="page.openSite">사이트 열기</a></p>
+      </div>
+    </section>
+    <div class="pair wrap" data-reveal>
+      <figure><img src="../assets/shots/hp-hero.webp" srcset="../assets/shots/hp-hero-1000.webp 1000w, ../assets/shots/hp-hero.webp 2000w" sizes="(max-width: 560px) 100vw, 50vw" alt="회사 홈페이지 첫 화면과 도입 문의 버튼" width="2000" height="1250" loading="lazy" data-i18n-alt="shot.aimbelab"></figure>
+      <figure><img src="../assets/shots/hp-platform.webp" srcset="../assets/shots/hp-platform-1000.webp 1000w, ../assets/shots/hp-platform.webp 2000w" sizes="(max-width: 560px) 100vw, 50vw" alt="웹과 앱에서 보는 마이피드 화면을 소개하는 구간" width="2000" height="1250" loading="lazy" data-i18n-alt="alt.hpPlatform"></figure>
+    </div>
+
+    <details class="limits wrap">
+      <summary data-i18n="mf.limit.h">수치와 범위에 대해</summary>
+      <ul>
+        <li data-i18n="mf.limit.1">요청 수·응답 크기·조회 횟수는 변경 커밋에서 확인한 값입니다. 모든 사용자 환경의 체감 속도를 잰 값은 아닙니다.</li>
+        <li data-i18n="mf.limit.2">보조 시각화는 일부 농장에 시범 적용한 단계입니다. 시각화가 잔량 추정의 정확도를 높이지는 않습니다.</li>
+        <li data-i18n="mf.limit.3">사내 서비스라 공개 링크는 없습니다.</li>
+        <li data-i18n="mf.limit.4">화면은 시험용 계정으로 찍었고, 실제 농가 정보는 담지 않았습니다.</li>
+      </ul>
+    </details>
+
+    <a class="next wrap" href="../readme-portrait/"><span data-i18n="page.next">이어서 보기</span><strong data-i18n="rp.title">사진 한 장을, README 속 움직이는 초상으로.</strong></a>
+  </main>
+
+  <footer class="foot wrap"><span data-i18n="footer.bottom">© 2026 김준수 · 프론트엔드 개발자</span></footer>
+
+  <script src="../js/strings-en.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/motion.js"></script>
+  <script src="../js/extras.js"></script>
+</body>
+</html>
