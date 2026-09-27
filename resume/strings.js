@@ -17,7 +17,7 @@ window.i18nStrings = {
     'r.pdfHref': 'resume-en.pdf',
     'r.pdfName': 'Junsu-Kim-Resume.pdf',
     'r.backToSite': 'Portfolio',
-    'r.photoAlt': 'ASCII portrait of Junsu Kim, made from a photo with readme_portrait',
+    'r.photoAlt': 'Photo of Junsu Kim',
     'r.awards.4': 'Excellence Award, Everyday-Flip AI App Idea Contest',
     'r.awards.5': '4th place, Fair Workplace Contest (KOCCA)',
     'r.awards.6': 'Honorable mention, Korail Retail idea contest',
@@ -25,29 +25,30 @@ window.i18nStrings = {
 
     'r.summary.title': 'Summary',
     'r.summary.body':
-      'Frontend developer running web development and operation for My Feed, a feed-management service used on farms. I turn customer enquiries into screen fixes, and cut the monitoring screen from 98 requests to 50 after finding the bottleneck with timing logs.',
+      'Frontend developer running My Feed, a feed-management web service used on farms. I shipped a front-end permission layer and leaner notification requests to production, fixed mobile overflow, and rebuilt the company homepage in Next.js and TypeScript.',
 
     'r.exp.title': 'Experience',
     'r.exp.1.company': 'AimBe Lab',
     'r.exp.1.role': 'Engineer, full-time · web development and operation',
     'r.exp.1.when': '2025.07 — Present',
     'r.exp.1.a':
-      '<strong>My Feed</strong> — monitoring screens, admin and web notifications; requests cut from 98 to 50 (staging), and each notification poll from six requests to one.',
+      '<strong>My Feed</strong> — monitoring, admin and notifications; each poll cut from six requests to one (production), monitoring requests 98 → 50 (staging).',
     'r.exp.1.c':
-      '<strong>Homepage rebuild</strong> — rebuilt for customers, with online enquiries routed to the sales team; contributed to a deal with a feed company.',
-    'r.exp.1.d': 'Built a mask-labelling tool for failed segmentations; proposed SAM2, which the AI engineer applied.',
+      '<strong>Homepage rebuild</strong> — rebuilt around the service, with enquiries validated on the server and filed as Flow tasks for the sales team; contributed to a deal with a feed company.',
+    'r.exp.1.d': 'Proposed human labelling of images the model failed to segment for retraining, and built the labelling screen.',
     'r.exp.2.company': 'The Innovators',
     'r.exp.2.role': 'Intern · Frontend · Deployment automation',
     'r.exp.2.when': '2025.03 — 2025.06',
     'r.exp.2.a':
-      '<strong>StartupQT</strong> — frontend for a quiz authoring and review SaaS.',
+      '<strong>StartupQT</strong> — frontend for a quiz authoring and review web service.',
     'r.exp.2.b': 'Deploys on GitHub Actions with a self-hosted EC2 runner; moved to PM2 when the Docker build ran out of disk.',
 
     'r.proj.title': 'Projects',
+    'r.proj.0.desc': 'Open-source tool: a photo into an animated ASCII portrait SVG for READMEs. Web studio, npm CLI, GitHub Action.',
     'r.proj.1.desc': 'UI component library on npm. Team of four; my part was the components. 807 weekly peak, 1,477 total (2026.08.11).',
-    'r.proj.2.desc': 'Quiz authoring and review SaaS. Frontend and deployment automation.',
-    'r.proj.3.desc': 'Diet-tracking PWA. Team of three; planning, UX, API design, frontend, presenting.',
-    'r.proj.4.desc': 'Moved a Vue service with poor search visibility to Next.js. Team lead.',
+    'r.proj.2.desc': 'Quiz authoring and review web service. Frontend and deployment automation.',
+    'r.proj.3.desc': 'Diet-tracking PWA. Team of three; planning, UX, API integration, frontend, presenting.',
+    'r.proj.4.desc': 'Bootcamp team project that rebuilt a Vue service in Next.js. Team lead; built the Next.js screens from Figma, responsive.',
 
     'r.skills.title': 'Skills',
     'r.skills.main': 'Use most',
@@ -62,11 +63,11 @@ window.i18nStrings = {
     'r.edu.gpa': 'GPA 3.45 / 4.5 (major 3.54)',
     'r.edu.military': 'ROK Army, sergeant, completed (2021.06 — 2022.12)',
 
-    'r.awards.title': 'Awards · Certifications',
+    'r.awards.title': 'Awards · Training · Certifications',
     'r.awards.0': 'Veritas Alpha Education Article Contest, Excellence Award',
     'r.awards.1': 'Korea Engineering Exhibition, Excellence Award — Eat Fit',
-    'r.awards.2': 'Sniper Factory Bootcamp, Excellence Award — Wairi',
-    'r.awards.3': 'Woongjin × Udemy Bootcamp, 2nd — Componique',
+    'r.train.label': 'Training',
+    'r.train.list': 'Sniper Factory bootcamp, Excellence Award (Wairi) · Woongjin × Udemy bootcamp, 2nd (Componique) · 2024',
     'r.certs.label': 'Certified',
     'r.certs.list': 'ADsP (2026.06) · Google Analytics (2025.09) · OPIc English IM1 (2025.02)',
   },

@@ -41,7 +41,7 @@
       <p class="lede" data-i18n="mf.sub">마이피드는 2026년 7월 기준 130여 농가가 사용하는 사료 관리 웹서비스입니다. 웹 개발과 운영을 맡아 농장 모니터링 화면, 관리자, 웹 알림을 만들고 고쳐 왔습니다.</p>
       <dl class="spec">
         <div><dt data-i18n="page.role">담당 역할</dt><dd data-i18n="mf.me.p">모니터링 화면·관리자·웹 알림 구현, 요청 수와 응답 크기 줄이기, 공통 UI 정리, 언어팩 전환, 마스크 라벨링 기능.</dd></div>
-        <div><dt data-i18n="mf.others.h">함께 일한 사람</dt><dd data-i18n="mf.others.p">앱 담당자와 요구사항·화면을 함께 정리했습니다. SAM2 모델 적용은 AI 담당자가 했습니다.</dd></div>
+        <div><dt data-i18n="mf.others.h">함께 일한 사람</dt><dd data-i18n="mf.others.p">앱 담당자와 요구사항·화면을 함께 정리했습니다.</dd></div>
         <div><dt>Stack</dt><dd>FastAPI · Jinja2 · JavaScript</dd></div>
       </dl>
     </header>
@@ -105,8 +105,7 @@
         <h2 id="c4" data-i18n="mf.ai.title">AI가 낸 결과를, 사람이 판단할 수 있게.</h2>
         <ul class="points">
           <li><strong data-i18n="mf.ai.1.h">보조 시각화</strong> <span data-i18n="mf.ai.1.p">잔량 수치만으로는 상태를 판단하기 어렵다는 고객 반응을 바탕으로, 사료빈 내부 형태를 보여 주는 보조 시각화를 개발하고 일부 농장에서 피드백을 받았습니다.</span></li>
-          <li><strong data-i18n="mf.ai.2.h">마스크 라벨링 기능</strong> <span data-i18n="mf.ai.2.p">분할에 실패한 이미지를 다시 쓸 수 있도록 마스크 라벨링 기능을 만들고 데이터를 제공했습니다.</span></li>
-          <li><strong data-i18n="mf.ai.3.h">SAM2 교체 제안</strong> <span data-i18n="mf.ai.3.p">SAM2 교체를 조사해 제안했습니다. 모델 적용은 AI 담당자가 했습니다.</span></li>
+          <li><strong data-i18n="mf.ai.2.h">버려지던 이미지를 학습 데이터로</strong> <span data-i18n="mf.ai.2.p">모델이 분할에 실패해 버려지던 이미지를 사람이 마스크로 다시 라벨링해 재학습에 쓰자고 제안하고, 그 라벨링 화면을 만들었습니다.</span></li>
         </ul>
       </div>
     </section>

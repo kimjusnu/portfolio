@@ -157,7 +157,8 @@
 .r-photo {
   flex: none;
   width: 25mm;
-  height: auto;
+  height: 28.3mm;
+  object-position: 50% 20%;
   border-radius: var(--radius-xs);
   object-fit: cover;
 }

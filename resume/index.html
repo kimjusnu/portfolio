@@ -84,11 +84,11 @@
         </li>
       </ul>
     </div>
-    <!-- 사진 자리는 직접 만든 readme_portrait로 증명사진을 바꾼 ASCII 초상입니다. 한국어판에만 나가고 영어판에서는 CSS가 숨깁니다. -->
-    <img class="r-photo" src="portrait.svg" width="560" height="635" data-i18n-attr="alt:r.photoAlt" alt="김준수의 ASCII 초상. 직접 만든 readme_portrait로 증명사진을 바꿨습니다." decoding="async">
+    <!-- 증명사진 원본. 한국어판에만 나가고 영어판에서는 CSS가 숨깁니다. -->
+    <img class="r-photo" src="photo.webp" width="600" height="800" data-i18n-attr="alt:r.photoAlt" alt="김준수 증명사진" decoding="async">
   </header>
 
-  <p class="r-summary" data-i18n="r.summary.body">농가에서 쓰는 사료 관리 웹서비스 마이피드의 웹 개발과 운영을 맡고 있는 프론트엔드 개발자입니다. 고객 문의를 요구사항으로 정리해 화면 구조와 사용성을 고쳤고, 구간별 소요시간 로그로 병목을 찾아 모니터링 화면의 요청 수를 98건에서 50건으로 줄였습니다. 회사 홈페이지를 고객 대상 소개로 개편하고 온라인 도입 문의를 사업팀 알림으로 연결했습니다.</p>
+  <p class="r-summary" data-i18n="r.summary.body">농가에서 쓰는 사료 관리 웹서비스 마이피드의 웹 개발과 운영을 맡고 있는 프론트엔드 개발자입니다. 프론트 권한 계층과 알림 요청 구조를 고쳐 운영에 반영했고, 모바일에서 가로로 넘치던 화면을 찾아 없앴습니다. 회사 홈페이지는 Next.js·TypeScript로 개편하고 도입 문의를 서버에서 검증해 사업팀 Flow 업무로 등록하도록 연결했습니다.</p>
 
   <!-- ========================== Experience ========================== -->
   <section class="r-section">
@@ -96,25 +96,25 @@
 
     <article class="r-item">
       <div class="r-item-head">
-        <h3 data-i18n="r.exp.1.company">AimBe Lab</h3>
+        <h3 data-i18n="r.exp.1.company">에임비랩</h3>
         <span class="r-when" data-i18n="r.exp.1.when">2025.07 — 현재</span>
       </div>
       <p class="r-role-line" data-i18n="r.exp.1.role">주임연구원 (정규직) · 웹 개발·운영</p>
       <ul>
-        <li data-i18n-html="r.exp.1.a"><strong>My Feed</strong> — 농장 모니터링 화면·관리자·웹 알림을 맡아, 모니터링 화면의 요청 수를 98건에서 50건으로(스테이징 측정), 알림 폴링 1회당 요청을 6개에서 1개로 줄였습니다.</li>
-        <li data-i18n-html="r.exp.1.c"><strong>홈페이지 개편</strong> — 회사 소개 중심 사이트를 서비스(마이피드) 중심 랜딩으로 바꾸고, 온라인 도입 문의를 사업팀 알림으로 연결했습니다. 이 문의 접점은 사료회사와의 거래 성사에 기여했습니다.</li>
-        <li data-i18n-html="r.exp.1.d">분할에 실패한 이미지의 마스크 라벨링 기능을 만들고, SAM2 교체를 조사해 제안했습니다. 모델 적용은 AI 담당자가 했습니다.</li>
+        <li data-i18n-html="r.exp.1.a"><strong>마이피드</strong> — 농장 모니터링 화면·관리자·웹 알림을 맡아, 알림 폴링 1회당 요청을 6개에서 1개로(운영), 모니터링 화면 요청 수를 98건에서 50건으로(스테이징 측정) 줄였습니다.</li>
+        <li data-i18n-html="r.exp.1.c"><strong>홈페이지 개편</strong> — 회사 소개 중심 사이트를 서비스(마이피드) 중심 랜딩으로 바꾸고, 도입 문의를 서버에서 검증해 사업팀 Flow 업무로 등록하도록 연결했습니다. 이 문의 접점은 사료회사와의 거래 성사에 기여했습니다.</li>
+        <li data-i18n-html="r.exp.1.d">모델이 분할에 실패해 버려지던 이미지를 사람이 다시 라벨링해 재학습 데이터로 쓰자고 제안하고, 그 라벨링 화면을 만들었습니다.</li>
       </ul>
     </article>
 
     <article class="r-item">
       <div class="r-item-head">
-        <h3 data-i18n="r.exp.2.company">The Innovators</h3>
+        <h3 data-i18n="r.exp.2.company">더이노베이터스</h3>
         <span class="r-when" data-i18n="r.exp.2.when">2025.03 — 2025.06</span>
       </div>
       <p class="r-role-line" data-i18n="r.exp.2.role">인턴 · 프론트엔드 · 배포 자동화</p>
       <ul>
-        <li data-i18n-html="r.exp.2.a"><strong>StartupQT</strong> — 퀴즈 저작·검수 SaaS의 프론트엔드를 맡았습니다.</li>
+        <li data-i18n-html="r.exp.2.a"><strong>StartupQT</strong> — 퀴즈 저작·검수 웹 서비스의 프론트엔드를 맡았습니다.</li>
         <li data-i18n-html="r.exp.2.b">GitHub Actions와 EC2 self-hosted runner로 배포를 구성했고, Docker 빌드가 디스크 부족으로 실패해 PM2 배포로 바꿨습니다.</li>
       </ul>
     </article>
@@ -125,6 +125,14 @@
     <h2 data-i18n="r.proj.title">프로젝트</h2>
 
     <ul class="r-projects">
+      <li>
+        <div class="r-proj-head">
+          <h3>readme_portrait</h3>
+          <a href="https://kimjusnu.github.io/readme_portrait/">kimjusnu.github.io/readme_portrait</a>
+        </div>
+        <p data-i18n="r.proj.0.desc">사진을 README용 움직이는 ASCII 초상 SVG로 바꾸는 오픈소스 도구. 웹 스튜디오·npm CLI·GitHub Action으로 배포.</p>
+        <p class="r-stack">JavaScript · SVG · Node.js CLI · GitHub Actions</p>
+      </li>
       <li>
         <div class="r-proj-head">
           <h3>Componique</h3>
@@ -138,7 +146,7 @@
           <h3>StartupQT</h3>
           <a href="https://startupqt.com/start">startupqt.com</a>
         </div>
-        <p data-i18n="r.proj.2.desc">퀴즈 저작·검수 SaaS. 프론트엔드와 배포 자동화 담당 (Docker 빌드가 디스크 부족으로 실패해 PM2로 전환).</p>
+        <p data-i18n="r.proj.2.desc">퀴즈 저작·검수 웹 서비스. 프론트엔드와 배포 자동화 담당 (Docker 빌드가 디스크 부족으로 실패해 PM2로 전환).</p>
         <p class="r-stack">Next.js · TypeScript · Zustand · GitHub Actions · PM2</p>
       </li>
       <li>
@@ -146,16 +154,8 @@
           <h3>Eat Fit</h3>
           <a href="https://expo.tukorea.ac.kr/2025/work/87">expo.tukorea.ac.kr</a>
         </div>
-        <p data-i18n="r.proj.3.desc">식단 관리 PWA. 3인 팀에서 기획·UX 흐름·API 설계·프론트엔드·최종 발표 담당.</p>
+        <p data-i18n="r.proj.3.desc">식단 관리 PWA. 3인 팀에서 기획·UX 흐름·API 연동·프론트엔드·최종 발표 담당.</p>
         <p class="r-stack">Next.js · FastAPI · AWS · PWA</p>
-      </li>
-      <li>
-        <div class="r-proj-head">
-          <h3>Wairi</h3>
-          <a href="https://www.wairi.co.kr/webapp">wairi.co.kr</a>
-        </div>
-        <p data-i18n="r.proj.4.desc">검색 노출에 불리했던 Vue 서비스를 Next.js로 옮긴 부트캠프 팀 프로젝트. 팀 리더.</p>
-        <p class="r-stack">Next.js · TypeScript · Tailwind CSS · SEO</p>
       </li>
     </ul>
   </section>
@@ -170,8 +170,6 @@
       <dd>Tailwind CSS · Zustand · GitHub Actions · PM2</dd>
       <dt data-i18n="r.skills.touched">협업하며 다룬 것</dt>
       <dd>Redis · Celery · MySQL</dd>
-      <dt data-i18n="r.skills.data">분석 도구</dt>
-      <dd>Google Analytics · Microsoft Clarity</dd>
     </dl>
   </section>
 
@@ -189,15 +187,17 @@
     </section>
 
     <section class="r-section">
-      <h2 data-i18n="r.awards.title">수상 · 자격</h2>
+      <h2 data-i18n="r.awards.title">수상 · 교육 · 자격</h2>
       <ul class="r-awards">
         <li><span data-i18n="r.awards.0">베리타스알파 교육기사 공모전 우수상 — 공개 데이터 분석</span><span class="r-year">2026.08</span></li>
         <li><span data-i18n="r.awards.4">제1회 일상뒤집기 AI 어플 아이디어 공모전 우수상 — 전기예보</span><span class="r-year">2026</span></li>
         <li><span data-i18n="r.awards.5">공정상생 일터만들기 공모전 4등 — 한국콘텐츠진흥원</span><span class="r-year">2026</span></li>
         <li><span data-i18n="r.awards.1">한국공학대전 우수상 — Eat Fit</span><span class="r-year">2025.12</span></li>
-        <li><span data-i18n="r.awards.2">스나이퍼팩토리 부트캠프 우수상 — Wairi</span><span class="r-year">2024</span></li>
-        <li><span data-i18n="r.awards.3">웅진씽크빅 × Udemy 부트캠프 2등 — Componique</span><span class="r-year">2024</span></li>
       </ul>
+      <p class="r-certs">
+        <span class="r-certs-label" data-i18n="r.train.label">교육</span>
+        <span data-i18n="r.train.list">스나이퍼팩토리 프론트엔드 부트캠프 우수상 (Wairi) · 웅진씽크빅 × Udemy Next.js 부트캠프 2위 (Componique) · 2024</span>
+      </p>
       <p class="r-certs">
         <span class="r-certs-label" data-i18n="r.certs.label">자격</span>
         <span data-i18n="r.certs.list">ADsP (2026.06) · Google Analytics 인증 (2025.09) · OPIc 영어 IM1 (2025.02)</span>
