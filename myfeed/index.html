@@ -75,7 +75,7 @@
       <div class="body">
         <h2 id="c2" data-i18n="mf.perf.title">느린 구간을 먼저 찾고, 그다음에 줄였습니다.</h2>
         <p data-i18n="w.c1.p">구간별 소요시간 로그로 느린 구간을 찾고, 사진 지연 로딩과 중복 호출 정리로 요청을 줄였습니다. 운영에는 공통 스크립트 제거만 반영됐습니다.</p>
-        <p class="figure-num"><b class="swap"><del>98</del> <ins>50</ins></b> <span data-i18n="fact.req">모니터링 화면 요청 수 (스테이징)</span></p>
+        <p class="figure-num"><b class="swap"><del>98</del> <ins>50</ins></b> <span data-i18n="fact.req">모니터링 화면 요청 수 (스테이징 검증)</span></p>
       </div>
     </section>
     <figure class="shot" data-reveal>
@@ -91,6 +91,14 @@
           <div><p class="vs-tag" data-i18n="mf.nt.a.label">안 읽은 알림 개수</p><strong data-i18n="mf.nt.a.h">화면을 안 볼 때는 멈춤</strong><p data-i18n="mf.nt.a.p">폴링 1회당 요청을 6개에서 1개로 줄이고, 숨은 탭에서는 멈추게 했습니다.</p></div>
           <div><p class="vs-tag" data-i18n="mf.nt.b.label">푸시가 끊겼을 때를 대비한 조회</p><strong data-i18n="mf.nt.b.h">숨은 탭에서도 유지</strong><p data-i18n="mf.nt.b.p">특정 브라우저에서 알림이 표시되지 않는 현상을 다른 브라우저와 비교하며 범위를 좁혔고, 이 조회는 계속 돌도록 두었습니다.</p></div>
         </div>
+        <h3 class="sub" data-i18n="mf.nt.case.h">한 브라우저에서만 알림이 뜨지 않았을 때</h3>
+        <ul class="points">
+          <li><strong data-i18n="mf.nt.case.1.h">증상</strong> <span data-i18n="mf.nt.case.1.p">Edge 151에서 웹 푸시가 서비스 워커까지 도착하지 않아 알림이 뜨지 않았습니다(2026.08).</span></li>
+          <li><strong data-i18n="mf.nt.case.2.h">비교</strong> <span data-i18n="mf.nt.case.2.p">같은 알림이 다른 브라우저에서는 뜨는 것을 확인해, 서버가 아니라 브라우저 쪽 문제로 범위를 좁혔습니다.</span></li>
+          <li><strong data-i18n="mf.nt.case.3.h">판단</strong> <span data-i18n="mf.nt.case.3.p">브라우저 내부 원인을 파고들기보다, 사용자에게 알림이 도착하게 하는 것을 먼저 해결했습니다.</span></li>
+          <li><strong data-i18n="mf.nt.case.4.h">조치</strong> <span data-i18n="mf.nt.case.4.p">폴링에서 안 읽은 개수가 늘면 보이는 탭에는 화면 안 알림을, 숨은 탭에는 OS 알림을 띄웠습니다. 푸시와 폴링이 겹쳐도 같은 tag와 알림 번호 기록으로 중복 표시를 줄였습니다.</span></li>
+          <li><strong data-i18n="mf.nt.case.5.h">한계</strong> <span data-i18n="mf.nt.case.5.p">원인은 확인하지 못했습니다. 이 보완은 페이지가 열려 있을 때만 동작합니다.</span></li>
+        </ul>
         <p class="figure-num"><b class="swap"><del>6</del> <ins>1</ins></b> <span data-i18n="fact.poll">알림 폴링 1회당 요청 (운영)</span></p>
       </div>
     </section>
@@ -105,7 +113,7 @@
         <h2 id="c4" data-i18n="mf.ai.title">AI가 낸 결과를, 사람이 판단할 수 있게.</h2>
         <ul class="points">
           <li><strong data-i18n="mf.ai.1.h">보조 시각화</strong> <span data-i18n="mf.ai.1.p">잔량 수치만으로는 상태를 판단하기 어렵다는 고객 반응을 바탕으로, 사료빈 내부 형태를 보여 주는 보조 시각화를 개발하고 일부 농장에서 피드백을 받았습니다.</span></li>
-          <li><strong data-i18n="mf.ai.2.h">버려지던 이미지를 학습 데이터로</strong> <span data-i18n="mf.ai.2.p">모델이 분할에 실패해 버려지던 이미지를 사람이 마스크로 다시 라벨링해 재학습에 쓰자고 제안하고, 그 라벨링 화면을 만들었습니다.</span></li>
+          <li><strong data-i18n="mf.ai.2.h">버려지던 이미지를 학습 데이터로</strong> <span data-i18n="mf.ai.2.p">모델이 분할에 실패해 버려지던 이미지를 사람이 마스크로 다시 라벨링해 재학습에 쓰자고 제안하고, 그 라벨링 화면을 만들었습니다. 라벨링한 이미지는 실제 재학습에 쓰였고, 지금은 모델이 스스로 분류하도록 바뀌어 이 방식은 더 쓰지 않습니다.</span></li>
         </ul>
       </div>
     </section>

@@ -186,6 +186,7 @@ small { font-size: 0.86em; color: var(--muted); font-weight: 450; }
 .chapter .no { font: 500 13px/1.8 var(--mono); color: var(--accent); margin: 6px 0 0; position: sticky; top: 24px; align-self: start; }
 .chapter h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.2; letter-spacing: -0.035em; margin: 0 0 20px; font-weight: 700; }
 .chapter .body > p { color: var(--muted); margin: 0 0 18px; }
+.chapter h3.sub { font-size: 18px; line-height: 1.35; letter-spacing: -0.02em; margin: 32px 0 14px; font-weight: 650; }
 .points { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 18px; }
 .points strong { display: block; font-weight: 650; margin-bottom: 2px; }
 .points span { color: var(--muted); }
