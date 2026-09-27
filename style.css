@@ -85,6 +85,13 @@ small { font-size: 0.86em; color: var(--muted); font-weight: 450; }
 .fix del::after { content: ""; position: absolute; left: -2%; right: -2%; top: 54%; height: 0.07em; background: var(--ink); transform-origin: left; }
 .fix ins { text-decoration: none; color: var(--accent); display: inline-block; white-space: nowrap; vertical-align: top; }
 .lede { max-width: 620px; font-size: clamp(18px, 1.6vw, 21px); color: var(--muted); margin: 36px 0 0; }
+.tenure { font: 500 13px/1.6 var(--mono); color: var(--faint); margin: 14px 0 0; }
+.more-awards { margin-top: 12px; }
+.more-awards summary { cursor: pointer; list-style: none; font: 500 13px/1.6 var(--mono); color: var(--muted); padding: 6px 0; }
+.more-awards summary::-webkit-details-marker { display: none; }
+.more-awards summary::after { content: " +"; }
+.more-awards[open] summary::after { content: " −"; }
+.more-awards summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .play .hero-title .line > * { animation: rise 1s var(--ease) both; }
 .play .hero-title .line:nth-child(2) > * { animation-delay: 0.1s; }
